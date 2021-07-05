@@ -9,6 +9,7 @@ body{
 
 body *{
     font-weight: bold;
+    font-family: "Arial";
 }
 
 #main{

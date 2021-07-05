@@ -15,28 +15,46 @@ Array.prototype.random = function () {
 };
 
 const history = [];
+const flickerLimit = 13;
+let flickerCount = flickerLimit;
 
-function onSpacePress() {
+let selectionA = "";
+let selectionB = "";
+let relationshipSelection = "";
+
+function flicker() {
   const itemA = document.getElementById("itemA");
   const itemB = document.getElementById("itemB");
   const relationship = document.getElementById("relationship");
 
-  const selectionA = items.random();
-  const selectionB = items.random();
-  const relationshipSelection = relationshipList.random();
+  selectionA = items.random();
+  selectionB = items.random();
+  relationshipSelection = relationshipList.random();
 
   itemA.textContent = selectionA;
   itemB.textContent = selectionB;
   relationship.textContent = relationshipSelection;
+}
 
-  const historyElem = document.getElementById("history");
-  history.push(`${selectionA} ${relationshipSelection} ${selectionB}`);
-  historyElem.textContent = history.join(", ");
+function onSpacePress() {
+
+	const cycle = setInterval(()=>{
+		if(flickerCount > 0){
+			flicker();
+      flickerCount = flickerCount - 1;
+		}else{
+      flickerCount = flickerLimit;
+      clearInterval(cycle);
+      const historyElem = document.getElementById("history");
+      history.push(`${selectionA} ${relationshipSelection} ${selectionB}`);
+      historyElem.textContent = history.join(", ");
+    }
+	},150)
+
 }
 
 document.onkeyup = function (e) {
   if (e.key == " ") {
-    console.log("space");
     onSpacePress();
   }
 };
