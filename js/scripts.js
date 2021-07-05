@@ -35,7 +35,6 @@ function onSpacePress() {
 }
 
 document.onkeyup = function (e) {
-  console.log(e.key);
   if (e.key == " ") {
     console.log("space");
     onSpacePress();
