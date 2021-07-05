@@ -6,9 +6,18 @@ const items = [
   "Ferris Wheel",
   "Fairy Floss",
   "Rubber Duck",
+  "Clock",
+  "Treasure Chest",
+  "Instagram Logo",
+  "Tambourine",
+  "Spaghetti Bolognese",
+  "SPF50+ Sunscreen",
+  "Birthday Cake",
+  "Butter",
+  "Whipped Cream"
 ];
 
-const relationshipList = ["in a", "on a"];
+const relationshipList = ["in a", "on a", "beneath a "];
 
 Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)];
