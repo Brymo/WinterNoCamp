@@ -10,11 +10,11 @@ const items = [
   "Treasure Chest",
   "Instagram Logo",
   "Tambourine",
-  "Spaghetti Bolognese",
-  "SPF50+ Sunscreen",
+  "Spaghetti Bolognese Meal",
+  "Sunscreen Bottle",
   "Birthday Cake",
-  "Butter",
-  "Whipped Cream"
+  "Stick of Butter",
+  "Jar of Cream"
 ];
 
 const relationshipList = ["in a", "on a", "beneath a "];
