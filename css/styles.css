@@ -1,0 +1,48 @@
+o
+
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: "Arial";
+}
+
+body *{
+    font-weight: bold;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#display{
+    width: 100vw;
+    height: 90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#itemA,#itemB{
+    font-size: 10rem;
+}
+
+#itemB{
+    text-decoration: underline;
+}
+
+#relationship{
+    font-size: 5rem;
+}
+
+#history{
+    font-size: 1rem;
+    color: lightgrey;
+
+}
